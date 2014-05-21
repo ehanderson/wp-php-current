@@ -1,0 +1,498 @@
+/*!
+ * Roots 6.5.2
+ */
+
+@import "bootstrap/bootstrap.less";
+@import "colorbox/colorbox-3.less";
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+body { }
+
+h1, h2, h3, h4, h5, h6 { text-transform: uppercase; }
+
+.btn {
+  border-radius: 0;
+  font-size: 1.133333em;
+  text-transform: uppercase;
+  font-family: @font-family-sans-serif;
+  font-weight: 500;
+  .transition(background .25s ease);
+}
+
+.btn-donate {
+  .button-variant(#fff, @brand-danger, @brand-danger);
+}
+
+.btn-blue {
+  .button-variant(#fff, @brand-blue, darken(@brand-blue,5));
+}
+
+.btn-red {
+  .button-variant(#fff, @brand-red, darken(@brand-red,5));
+}
+
+.btn-black {
+  .button-variant(#fff, @gray-darker, darken(@gray-darker,5));
+}
+
+.btn-green {
+  .button-variant(@gray-darker, @brand-green, darken(@brand-green,5));
+}
+
+.alert {
+  font-family: @font-family-sans-serif;
+  font-size: @font-size-large;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.banner {
+  font-family: @font-family-sans-serif;
+  margin-bottom: 0;
+  border: none;
+  background: transparent;
+}
+
+.navbar-default .navbar-toggle {
+  border: none; padding: 0;
+  .icon-bar {width: 30px; height: 4px; }
+  .icon-bar+.icon-bar {margin-top: 6px; }
+}
+
+
+.navbar-header {
+  background: @gray-darker;
+  text-align: center;
+}
+.navbar-header .logo {
+  margin-left:  auto;
+  margin-right: auto;
+  padding: 16px;
+  display: block;
+  img {.img-responsive(); height: @navbar-height - 32; }
+}
+
+
+.banner .container .banner-inner { background: #fff;}
+
+.banner .navbar-nav li a {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  > ul li a {padding: 20px;}
+}
+
+.banner .navbar-btn {
+  margin: 13px 30px 13px 10px;
+}
+
+
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.content { margin-top: 0; padding-top: 0; }
+
+.carousel {
+  margin-bottom: 30px;
+  .carousel-caption { text-align: left; left: 10%; right: 60%; bottom: 120px; }
+
+  .carousel-control .fa {position: absolute; top: 60px;  padding: 20px 10px; color: @gray-lighter; }
+  .carousel-control.left .fa {left: 0; border-radius: 0px 4px 4px 0px }
+  .carousel-control.right .fa {right:0; border-radius: 4px 0px 0px 4px }
+
+}
+
+.content-block {
+  padding: 40px;
+  margin-bottom: 30px;
+}
+
+.content-block.social {
+  background: @brand-blue;
+  color: #fff;
+  a { color: #fff; font-weight: bold; }
+  a.btn-twitter, a.btn-facebook {
+    font-size: @font-size-small;
+    .button-variant(@gray-darker, #fff, @gray-lighter);
+    span.fa { color: @link-color; margin-left: 10px; }
+    &:hover span.fa { color: @link-hover-color; }
+  }
+
+  .social-twitter {
+
+    .latest-tweets {
+      ul { .list-unstyled(); }
+      .tweet-details {display: none}
+    }
+  }
+  .social-facebook {
+    .rfbp-text p {margin-bottom: 0;}
+    .rfbp-post-link-wrap {display: none;}
+  }
+
+  hr {margin: 20px -40px;}
+
+}
+
+.content-block.signup {
+  background: #fff;
+
+  h3 {margin-top: 0;}
+}
+
+.feature-block {
+  background: #fff;
+  margin-bottom: 30px;
+}
+
+
+
+/* ==========================================================================
+   Primary Content
+   ========================================================================== */
+
+.issue.single .main,
+.post-type-archive-issue .main {
+  background: #fff;
+  padding: 40px;
+}
+
+
+
+.main { }
+
+.page-header {
+  &.header-graphic {
+    position: relative;
+    border: none;
+    padding: 0;
+    margin-bottom: 30px;
+    img.wp-post-image {.img-responsive(); margin-top: -40px;}
+    .header-graphic-caption {
+      position: absolute; top: 100px; left: 60px;
+      width: 50%;
+    }
+  }
+}
+
+
+/* Gallery Shortcode */
+.gallery-row { padding: 15px 0; }
+
+
+
+/* ==========================================================================
+   Home Page
+   ========================================================================== */
+
+.feature-block {
+  .feature-content {padding: 40px;}
+  .feature-content h3 {margin-top: 0; a {color: @gray-dark; &:hover {color: @gray-darker;}}}
+  .feature-content .author {color: #a3abaf; font-family: @font-family-sans-serif; }
+  .feature-graphic {position: relative;  background: #000; height: 100%;}
+  .feature-graphic img {.img-responsive();}
+  .feature-graphic .feature-buttons { text-align: center; background: @gray-darker;  padding: 15px 30px; font-family: @font-family-sans-serif; .clearfix(); }
+  .feature-graphic .feature-buttons a {position:relative; text-decoration:none; width: 33%; display:inline-block; float: left; color: #fff; &:hover {color: @link-hover-color;} }
+  .feature-graphic .feature-buttons a:first-child  {width: 34%; }
+
+}
+
+
+
+.quote-block {
+  background: @gray-darker;
+  padding: 20px 20px 60px;
+  margin-bottom: 30px;
+  position: relative;
+  blockquote.quote {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-align: center;
+    font-size: @font-size-base;
+    .quote-text {
+      font-family: @font-family-sans-serif;
+      font-style: italic;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: @font-size-base;
+      color: #fff;
+    }
+    .quote-text:before {content: '\201C' }
+    .quote-text:after {content: '\201D' }
+      .quote-author {
+      display: inline;
+      font-size: 1.25em;
+    }
+  }
+
+  .btn-quote-share {
+    .button-variant(@gray-darker, @brand-blue, darken(@brand-blue,5));
+    position: absolute;
+    bottom: 0; right: 0;
+  }
+
+}
+
+
+
+
+/* ==========================================================================
+   Issues
+   ========================================================================== */
+
+body.post-type-archive-issue {
+  article.issue {
+    margin-bottom: 30px;
+    .entry-title a { color: @brand-red; }
+    .issue-icon {img {.img-responsive();}}
+    .issue-content strong { font-weight: bold; background: @brand-green; padding: 1px 2px; color: @gray-darker; }
+    .more-link {text-decoration: underline; text-transform: uppercase; font-weight: bold; font-family: @font-family-sans-serif;}
+    &.even .issue-icon { .make-sm-column-push(9); }
+    &.even .issue-content { .make-sm-column-pull(3); }
+
+  }
+}
+
+
+body.single-issue {
+  article.issue {background: #fff;}
+  header {margin-bottom: @line-height-computed; padding-bottom: @line-height-computed; border-bottom: 2px solid @gray;}
+  .issue-image { img {.img-responsive()}}
+  .entry-title {margin-top: @line-height-computed*2;}
+}
+
+
+/* ==========================================================================
+   Campaign Page
+   ========================================================================== */
+body.post-type-archive-campaign {
+
+  .main {padding-top: 30px;}
+
+}
+
+body.single-campaign {
+
+  .quote-block {
+    background: @brand-blue;
+    .quote-text, .quote-author {color: @gray-darker;}
+    .quote-author {display: block; text-transform: uppercase; margin-top: @line-height-computed; font-family: @font-family-sans-serif; &:before {content: ''; }}
+    .btn-quote-share { display: none; .button-variant(@gray-lighter, @gray-darker, darken(@gray-darker,5)); }
+  }
+
+  .entry-content {
+    background: #fff;
+
+
+    ul.issues {.list-unstyled(); margin-top: @line-height-computed * 2;}
+    ul.content-links {.list-unstyled(); margin-top: @line-height-computed; a {font-weight: bold; text-decoration: underline;}}
+  }
+
+  .share-your-story {
+    background: @brand-green;
+    color: @gray-darker;
+    text-align: center;
+    font-family: @font-family-sans-serif;
+    .btn-black {color: @brand-green;}
+  }
+
+}
+
+
+
+/* ==========================================================================
+   About Page
+   ========================================================================== */
+
+body.about {
+
+  .partners {
+    background: @brand-blue;
+    color: @gray-darker;
+    p {font-family: @font-family-sans-serif; text-transform: uppercase;}
+    .btn {color: @brand-blue; &:hover {color: #fff;}}
+  }
+
+  .modal {
+    .partner {
+      margin-bottom: 30px;
+      a.partner-link {text-align: right; display: block; margin-top: -20px; border-bottom: 2px solid @link-color; line-height: 1;}
+    }
+  }
+
+  .join {
+    background: @brand-green;
+    color: @gray-darker;
+    img {.img-responsive(); margin-bottom: @line-height-computed;}
+    .btn {color: @brand-green; &:hover {color: #fff;}}
+  }
+
+  .people {
+    background: #fff;
+
+    .person {text-align: center;}
+
+  }
+
+}
+
+
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+.sidebar { }
+
+
+
+/* ==========================================================================
+   Posts
+   ========================================================================== */
+
+.hentry header { }
+.hentry time { }
+.hentry .byline { }
+.hentry .entry-content { img {.img-responsive();}}
+.hentry footer { }
+
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.content-info {
+  text-align: center;
+  padding: 40px 0 100px;
+}
+
+.content-info .social-links {
+  a.social-link { text-decoration: none; }
+  a.social-link .fa-inverse {color: #fff; }
+  a.social-link .fa-stack-2x {.transition(color .25s ease );}
+  a.twitter .fa-stack-2x {color: @brand-green;}
+  a.twitter:hover .fa-stack-2x {color: darken(@brand-green,10);}
+  a.facebook .fa-stack-2x {color: @brand-blue;}
+  a.facebook:hover .fa-stack-2x {color: darken(@brand-blue,10);}
+  a.instagram .fa-stack-2x {color: @gray-darker;}
+  a.instagram:hover .fa-stack-2x {color: darken(@gray-darker,10);}
+}
+
+.content-info .footer-nav {
+  display: inline-block;
+  margin: 0 auto;
+  font-family: @font-family-sans-serif;
+  font-size: @font-size-small;
+  li {
+    display: inline;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    float: left;
+    a { display: inline-block; padding: 10px; color: @gray-darker; text-transform: uppercase; font-weight: 500; &:hover { text-decoration: underline; }}
+  }
+  li:before {content: '/'; display: inline; }
+  :first-child:before {content: '';}
+}
+
+
+
+/* ==========================================================================
+   WordPress Generated Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { float: left; }
+.alignright { float: right; }
+figure.alignnone { margin-left: 0; margin-right: 0; }
+
+
+/* ==========================================================================
+   Gravity Forms overrides
+   Also see /assets/less/bootstrap/gravityforms.less
+   ========================================================================== */
+
+.gform_body {
+  font-family: @font-family-sans-serif;
+}
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media (max-width: @screen-xs-max) {
+  .navbar .container {padding-left: 0; padding-right: 0;}
+  .carousel {margin: 0 -15px @line-height-computed;}
+}
+
+@media (max-width: @screen-sm-max) {
+
+  .carousel {
+    margin-bottom: @line-height-computed;
+    .carousel-caption {position: static; background: #fff; padding: 15px 15px 30px; color: @gray-dark; text-shadow: none; .btn {.btn-block();}}
+    .carousel-control {background: transparent;}
+
+  }
+}
+
+@media (min-width: @screen-sm-min) {
+  .feature-block {
+    .feature-graphic {padding-left: 20%;}
+    .feature-graphic .feature-buttons {
+      position: absolute; width: 20%;
+      top:0; bottom: 0; left: 0;
+    }
+    .feature-graphic .feature-buttons a { height: 30%; width: auto; float: none; display: block;}
+    .feature-graphic .feature-buttons a:first-child  {margin-top:10%; width: auto; }
+  }
+
+  .quote-block {
+      padding: 40px 80px;
+      blockquote.quote .quote-text {font-size: 1.666em; }
+  }
+
+}
+
+@media (min-width: @screen-md-min) {
+  .banner .navbar-nav li a { padding-left: 30px; padding-right: 30px; }
+  body.post-type-archive-issue  .main {padding-left: 100px; padding-right: 100px;}
+  .carousel .carousel-control .fa {top: 50%; margin-top: -30px; background: #fff; color: @gray-darker; }
+
+  .ul.dropdown-menu {padding-top: 15px; padding-bottom: 15px;}
+
+  .banner ul.dropdown-menu > li > a { padding: 15px;}
+
+  ul.dropdown-menu:after {
+    font-family:  FontAwesome;
+    content: @fa-var-caret-up;
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    top: -19px;
+    text-shadow: 0px -1px 1px fade(#000,17.5);
+    line-height: 30px;
+    left: 30px;
+    margin-left: 0;
+  }
+
+
+}
+
+@media (min-width: @screen-lg-min) {
+
+  .banner .navbar-nav li a { padding-left: 40px; padding-right: 40px; }
+
+  .content-block.social a.btn-twitter, .content-block.social a.btn-facebook {font-size: @font-size-base; span.fa {margin-left: 15px;}}
+}

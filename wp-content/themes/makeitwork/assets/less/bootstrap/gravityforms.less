@@ -1,0 +1,98 @@
+.gform_wrapper ul {
+  .list-unstyled();
+}
+.gform_wrapper li {
+  .form-group();
+}
+.gform_wrapper form {
+  margin-bottom: 0;
+}
+.gform_wrapper .gfield_required {
+  padding-left: 1px;
+  color: @state-danger-text;
+}
+.ginput_container input,
+.ginput_container select,
+.ginput_container textarea {
+  .form-control();
+}
+.ginput_container textarea {
+  height: auto;
+}
+
+.ginput_container input[type=checkbox] {
+  height: auto;
+}
+
+.gform_wrapper .gfield_checkbox li, .gform_wrapper .gfield_radio li {
+  .clearfix();
+  margin-bottom: @line-height-computed/4;
+}
+
+.gform_wrapper .gfield_checkbox li label, .gform_wrapper .gfield_radio li label {
+  float: left;
+  margin: 0 0 0 10px;
+}
+
+.gform_wrapper .gfield_checkbox li input[type=checkbox], .gform_wrapper .gfield_radio li input[type=radio], .gform_wrapper .gfield_checkbox li input {
+  float: left;
+  height: auto;
+  width: auto;
+}
+
+.gform_button {
+  .btn();
+  //.btn-lg();
+  .btn-black();
+}
+.gform_wrapper .gfield_error {
+  .gfield_label {
+    color: @state-danger-text;
+  }
+  input,
+  select,
+  textarea {
+    border-color: @alert-danger-border;
+    background-color: @alert-danger-bg;
+    color: @alert-danger-text;
+    .form-control-focus(@alert-danger-text);
+  }
+}
+
+.validation_message {
+  color: @alert-warning-text;
+  font-style: italic;
+}
+
+.validation_error {
+  .alert();
+  .alert-danger();
+}
+#gforms_confirmation_message {
+  .alert();
+  .alert-success();
+}
+
+.gform_footer {.clearfix();}
+
+.ginput_complex label {font-size: @font-size-small; line-height: 1; font-weight: normal; font-style: italic; display: block;}
+
+.ginput_complex {.clearfix(); margin-bottom: 0;}
+
+.ginput_complex input, .ginput_complex select {margin-bottom: 10px;}
+
+.gfield textarea {height: @line-height-computed*5;}
+
+.gform_validation_container {.hide();}
+
+
+@media (min-width: @screen-sm) {
+  .gform_fields  {
+    .gfield { clear:both; }
+    .ginput_complex .ginput_left, .ginput_complex .ginput_right, li.gf_left_half, li.gf_right_half { float: left; width: 49%; clear: none;}
+    .ginput_complex .ginput_left {clear: left;}
+    //.ginput_complex .ginput_right {clear: right;}
+    .ginput_complex .ginput_right, li.gf_right_half { .clearfix(); margin-left: 2%; }
+
+  }
+}
