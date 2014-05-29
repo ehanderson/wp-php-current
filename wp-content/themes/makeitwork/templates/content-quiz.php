@@ -45,7 +45,6 @@
                   <br>
                   <input name="wpquiz_question2" id='wpquiz_question_2' type='radio' value='4' class='radio-option' onchange="toggleStatus2()"/>Option 4
                   <br>
-                  <input type="button" name="previous" class="previous" value="Previous" />
                   <input type="button" name="next"  id="wpquiz_question2" class="next action-button" value="Next" />
                   <p>(2 of 5)</p>
                 </fieldset>
@@ -61,7 +60,6 @@
                   <br>
                   <input name="wpquiz_question3" id='wpquiz_question_3' type='radio' value='4' class='radio-option' onchange="toggleStatus3()"/>Option 4
                   <br>
-                  <input type="button" name="previous" class="previous" value="Previous" />
                   <input type="button" name="next" id="wpquiz_question3" class="next action-button" value="Next" />
 
                   <p>(3 of 5)</p>
@@ -77,7 +75,6 @@
                   <br>
                   <input name="wpquiz_question4" id='wpquiz_question_4' type='radio' value='4' class='radio-option' onchange="toggleStatus4()"/>Option 4
                   <br>
-                  <input type="button" name="previous" class="previous" value="Previous" />
                   <input type="button" name="next"  id="wpquiz_question4" class="next action-button" value="Next" />
 
                   <p>(4 of 5)</p>
@@ -102,7 +99,6 @@
                   <input name="wpquiz_email" id="wpquiz_email" type="text" value="<?php echo htmlspecialchars($email);?>" class="regular-text" />
                   <!-- <span class="error"><?php echo $emailErr?></span> -->
                   <br>
-                  <input type="button" name="previous" class="previous" value="Previous" />
                   <input class="button-primary" id= 'submit' type="submit" name="wpquiz_email_submit" value="Find Results"/>
 
                 </fieldset>
