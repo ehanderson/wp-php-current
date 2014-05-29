@@ -1,0 +1,43 @@
+#wpquiz_form{
+  font-family: 'Lora', Georgia, "Times New Roman", Times, serif;
+  text-align:center;
+  margin: 5em auto;
+}
+
+fieldset{
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  box-sizing: border-box;
+  width: 80%;
+  /*height: 600px;*/
+  margin: 0 10%;
+}
+.wpquiz_option{
+  color: green;
+}
+
+fieldset .radio-option{
+  margin-bottom: 40px;
+}
+
+.next {
+  /*text-align: none !important;*/
+  float:right;
+}
+#submit{
+ float:right;
+}
+.previous{
+  float:left;
+}
+#wpquiz_form action-button{
+  cursor: pointer;
+}
+
+#wpquiz_form fieldset:not(:first-of-type) {
+  display: none;
+}
+#wpquiz_form .action-button:hover, #wpquiz_form .action-button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
