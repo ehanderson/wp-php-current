@@ -49,5 +49,3 @@ function wpquiz_options_page(){
 
 
 ?>
-
-

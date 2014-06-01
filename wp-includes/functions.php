@@ -2448,6 +2448,7 @@ function _default_wp_die_handler( $message, $title = '', $args = array() ) {
 	<?php echo $message; ?>
 </body>
 </html>
+
 <?php
 	die();
 }
