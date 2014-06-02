@@ -5,5 +5,6 @@
   </header>
   <div class="entry-summary">
     <?php the_excerpt(); ?>
+    <h1> Jimmer Jabber </h1>
   </div>
 </article>
